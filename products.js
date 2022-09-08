@@ -88,3 +88,72 @@ const products = [
     imageDescription: "",
   },
 ];
+
+function FiltrarProdutos(listaProdutos) {
+  for (let i = 0; i < listaProdutos.length; i++) {
+    let produtoAtual = listaProdutos[i];
+    if (produtoAtual.image == undefined) {
+      produtoAtual.image = "./img/products/no-img.svg";
+      console.log(produtoAtual.image);
+    }
+    if (produtoAtual.category === "Frutas") {
+      document.querySelector(".ul_fruits").insertAdjacentHTML(
+        "afterbegin",
+        `
+      <li class="product">
+        <img
+          src="${produtoAtual.image}"
+          alt=""
+          title=""
+          class="product-img"
+          />
+        <div class="product-main">
+          <h1 class="product-title">${produtoAtual.title}</h1>
+          <h5 class="product-category">${produtoAtual.category}</h5>
+          <strong class="product-price">R$ ${produtoAtual.price}</strong>
+        </div>
+      </li>      
+      `
+      );
+    } else if (produtoAtual.category === "Bebidas") {
+      document.querySelector(".ul_drinks").insertAdjacentHTML(
+        "afterbegin",
+        `
+      <li class="product">
+        <img
+          src="${produtoAtual.image}"
+          alt=""
+          title=""
+          class="product-img"
+          />
+        <div class="product-main">
+          <h1 class="product-title">${produtoAtual.title}</h1>
+          <h5 class="product-category">${produtoAtual.category}</h5>
+          <strong class="product-price">R$ ${produtoAtual.price}</strong>
+        </div>
+      </li>      
+      `
+      );
+    } else if (produtoAtual.category === "Higiene") {
+      document.querySelector(".ul_hygiene").insertAdjacentHTML(
+        "afterbegin",
+        `
+      <li class="product">
+        <img
+          src="${produtoAtual.image}"
+          alt=""
+          title=""
+          class="product-img"
+          />
+        <div class="product-main">
+          <h1 class="product-title">${produtoAtual.title}</h1>
+          <h5 class="product-category">${produtoAtual.category}</h5>
+          <strong class="product-price">R$ ${produtoAtual.price}</strong>
+        </div>
+      </li>      
+      `
+      );
+    }
+  }
+}
+FiltrarProdutos(products);
