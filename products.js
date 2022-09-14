@@ -146,11 +146,11 @@ function FiltrarProdutos(listaProdutos) {
           title=""
           class="product-img"
           />
-        <div class="product-main">
+        <main class="product-main">
           <h1 class="product-title">${produtoAtual.title}</h1>
           <h5 class="product-category">${produtoAtual.category}</h5>
           <strong class="product-price">R$ ${produtoAtual.price}</strong>
-        </div>
+        </main>
       </li>      
       `
       );
@@ -165,11 +165,11 @@ function FiltrarProdutos(listaProdutos) {
           title=""
           class="product-img"
           />
-        <div class="product-main">
+        <main class="product-main">
           <h1 class="product-title">${produtoAtual.title}</h1>
           <h5 class="product-category">${produtoAtual.category}</h5>
           <strong class="product-price">R$ ${produtoAtual.price}</strong>
-        </div>
+        </main>
       </li>      
       `
       );
@@ -184,11 +184,11 @@ function FiltrarProdutos(listaProdutos) {
           title=""
           class="product-img"
           />
-        <div class="product-main">
+        <main class="product-main">
           <h1 class="product-title">${produtoAtual.title}</h1>
           <h5 class="product-category">${produtoAtual.category}</h5>
           <strong class="product-price">R$ ${produtoAtual.price}</strong>
-        </div>
+        </main>
       </li>      
       `
       );
